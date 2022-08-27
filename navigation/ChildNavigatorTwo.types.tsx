@@ -1,18 +1,6 @@
-import { CompositeScreenProps } from "@react-navigation/native";
-import { StackScreenProps } from "@react-navigation/stack";
-import { ChildNavigatorTwoProps } from "./RootNavigator.types";
+import { NavigatorScreenParams } from "@react-navigation/native";
+import { LeafNavigatorStackParamList } from "./LeafNavigator.types";
 
 export type ChildNavigatorTwoStackParamList = {
-  ScreenThree: undefined;
-  ScreenFour: undefined;
+  LeafNavigator: NavigatorScreenParams<LeafNavigatorStackParamList>;
 };
-
-export type ScreenThreeProps = CompositeScreenProps<
-  StackScreenProps<ChildNavigatorTwoStackParamList, "ScreenThree">,
-  ChildNavigatorTwoProps
->;
-
-export type ScreenFourProps = StackScreenProps<
-  ChildNavigatorTwoStackParamList,
-  "ScreenFour"
->;

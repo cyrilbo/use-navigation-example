@@ -11,7 +11,10 @@ export const ScreenThree = () => {
       <Button
         title="go to Screen Four"
         onPress={() => {
-          navigation.navigate("ChildNavigatorTwo", { screen: "ScreenFour" });
+          navigation.navigate("ChildNavigatorTwo", {
+            screen: "LeafNavigator",
+            params: { screen: "ScreenFour" },
+          });
         }}
       />
       <Button

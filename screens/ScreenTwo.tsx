@@ -1,9 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { ScreenTwoProps } from "../navigation/ChildNavigatorOne.types";
 
 export const ScreenTwo = () => {
-  const navigation = useNavigation<ScreenTwoProps["navigation"]>();
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Screen Two</Text>

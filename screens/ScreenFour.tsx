@@ -1,9 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { ScreenFourProps } from "../navigation/ChildNavigatorTwo.types";
 
 export const ScreenFour = () => {
-  const navigation = useNavigation<ScreenFourProps["navigation"]>();
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Screen Four</Text>

@@ -1,5 +1,6 @@
 import { CommonActions, useNavigation } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View } from "react-native";
+import { GoToScreenTwoButton } from "../components/GoToScreenTwoButton";
 import { ScreenOneProps } from "../navigation/ChildNavigatorOne.types";
 
 export const ScreenOne = () => {
@@ -7,6 +8,7 @@ export const ScreenOne = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Screen One</Text>
+      <GoToScreenTwoButton />
       <Button
         title="Replace with second navigator"
         onPress={() => {

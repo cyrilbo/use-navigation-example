@@ -1,20 +1,21 @@
-import { CommonActions, useNavigation } from "@react-navigation/native";
+import { CommonActions } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { GoToScreenTwoButton } from "../components/GoToScreenTwoButton";
+import { ScreenThreeProps } from "../navigation/LeafNavigator.types";
 
-export const ScreenThree = () => {
-  const navigation = useNavigation();
+export const ScreenThree = ({ navigation }: ScreenThreeProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Screen Three</Text>
-      <GoToScreenTwoButton />
+      <GoToScreenTwoButton
+        onPress={() =>
+          navigation.navigate("ChildNavigatorOne", { screen: "ScreenTwo" })
+        }
+      />
       <Button
         title="go to Screen Four"
         onPress={() => {
-          navigation.navigate("ChildNavigatorTwo", {
-            screen: "LeafNavigator",
-            params: { screen: "ScreenFour" },
-          });
+          navigation.navigate("ScreenFour");
         }}
       />
       <Button

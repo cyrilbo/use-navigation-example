@@ -1,8 +1,7 @@
-import { useNavigation } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View } from "react-native";
+import { ScreenFourProps } from "../navigation/LeafNavigator.types";
 
-export const ScreenFour = () => {
-  const navigation = useNavigation();
+export const ScreenFour = ({ navigation }: ScreenFourProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Screen Four</Text>
